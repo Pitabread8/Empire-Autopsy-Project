@@ -1,17 +1,13 @@
-function createDiv() {
-    // grid size number
-    for (i = 0; i < 24; i++) {
-        let item = document.createElement('div');
-        item.className = "grid-item";
-        item.id = i;
-        grid = document.getElementById('grid');
-        grid.appendChild(item);
-        // grid style
-    }
-    // clearDiv();
-    divHover();
-    // gridlines + enhancement options
-}
+// function createDiv() {
+//     for (i = 0; i < 24; i++) {
+//         let item = document.createElement('div');
+//         item.className = "grid-item";
+//         item.id = alphabet[i];
+//         grid = document.getElementById('grid');
+//         grid.appendChild(item);
+//     }
+//     divHover();
+// }
 
 function addNone() {
     let divs = document.getElementsByClassName("grid-item");
@@ -19,8 +15,6 @@ function addNone() {
         divs[i].style.boxShadow = "initial";
     }
 }
-
-// add gridlines + enhancements
 
 function divHover() {
     const items = document.getElementsByClassName('grid-item');
@@ -33,4 +27,6 @@ function divHover() {
     };
 }
 
-// reset grid color
+let blurbs = {
+    "head": "long blurb about head"
+}

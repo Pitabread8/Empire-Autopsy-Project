@@ -1,42 +1,79 @@
-html {
-    height: 100%;
-    background-image: linear-gradient(360deg, #9E101C, #C21F48, #FFBC42);
+:root {
+    --white: #e5ddc8;
+    --red: #c00;
+    --black: #000;
 }
 
 body {
+    height: 100%;
+    background-color: var(--white);
     margin: 0;
-    font-family: "Sofia";
-    color: #FFF;
+    font-family: "Special Elite";
+    text-align: center;
 }
 
-h1 {
-    text-align: center;
-    font-size: 50px;
+#title {
+    margin-top: 40px;
 }
 
 #grid {
     margin: 0 auto;
     display: grid;
-    outline: solid 5px #FFBC42;
-    box-shadow: 0 0 30px #9E101C;
+    outline: solid 10px var(--red);
+    box-shadow: 0 0 30px var(--black);
     width: 282px;
     height: 562px;
     /* 350px × 650px */
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-areas:
+                ". head head ."
+                "arm spine heart ."
+                "hand ribs stomach hand"
+                ". leg leg ."
+                ". leg leg ."
+                ". foot foot ."; */
     background-image: url("image.png");
     background-repeat: no-repeat;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 60%;
+    left: 60%;
+    transform: translate(-60%, -50%);
 }
-
+  
 .grid-item {
-    box-shadow: inset 0px 0px 0px 2px #9E101C;
-    box-sizing: border-box;
+    box-shadow: inset 0px 0px 0px 2px var(--red);
 }
 
-/* buttons */
-/* color picker */
-/* Github symbol */
+#blurb {
+    width: 400px;
+    height: 300px;
+    border: 10px var(--red) solid;
+    box-shadow: 0 0 30px var(--black);
+    position: fixed;
+    top: 45%;
+    left: 10%;
+    transform: translate(-10%, -50%);
+}
+
+h3 {
+    color: var(--red);
+}
+
+p {
+    color: var(--black);
+}
+
+#info {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+}
+
+.entry {
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 18px;
+}
